@@ -90,3 +90,16 @@ plaintextCopyStudent List (/students)
 ├── View Student (/students/{id})
 │   └── Edit Student (/students/edit/{id})
 └── Delete Student (modal confirmation)
+
+
+Pending Features (if you want to add)
+
+
+Advanced filtering
+Bulk actions
+Export functionality
+Profile image upload
+More detailed enrollment management
+Academic history
+Student statistics
+Print/PDF generation
