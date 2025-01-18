@@ -1,0 +1,92 @@
+Main Configuration Files
+
+javascriptCopy// App.js
+- Root component
+- Sets up routing for all student-related components
+- Handles layout structure
+
+// services/api.js
+- Axios configuration
+- Base URL setup
+- Common headers
+- Error handling
+
+// services/studentService.js
+- API endpoints for all student operations
+- CRUD operations methods
+- Search functionality
+
+Student List Functionality
+
+javascriptCopy// components/students/StudentList.js
+Purpose:
+- Displays list of all students
+- Provides search functionality
+- Handles pagination
+- Sorting capabilities
+- Actions (View, Edit, Delete)
+
+Features:
+- Table view with sortable columns
+- Search students
+- Pagination
+- Delete confirmation
+- Loading states
+- Error handling
+- Success/error notifications
+
+Student Details Functionality
+
+javascriptCopy// components/students/StudentDetails.js
+Purpose:
+- Shows detailed view of a single student
+- Displays enrolled subjects
+- Navigation to edit form
+
+Features:
+- Displays all student information
+- Shows enrollment information
+- Edit and Back buttons
+- Error handling
+- Loading states
+
+Student Form Functionality
+
+javascriptCopy// components/students/StudentForm.js
+Purpose:
+- Handles both creation and editing of students
+- Form validation
+- Data submission
+
+Features:
+- Form validation
+- Error messages
+- Success/failure notifications
+- Handles both new and edit modes
+- Cancel/Submit actions
+
+API Flow
+
+plaintextCopyCreate Student:
+Frontend → studentService.createStudent() → Backend POST /api/students
+
+Read Student:
+Frontend → studentService.getStudentById() → Backend GET /api/students/{id}
+Frontend → studentService.getAllStudents() → Backend GET /api/students
+
+Update Student:
+Frontend → studentService.updateStudent() → Backend PUT /api/students/{id}
+
+Delete Student:
+Frontend → studentService.deleteStudent() → Backend DELETE /api/students/{id}
+
+Search Students:
+Frontend → studentService.searchStudents() → Backend GET /api/students/search
+
+Navigation Flow
+
+plaintextCopyStudent List (/students)
+├── Add Student (/students/new)
+├── View Student (/students/{id})
+│   └── Edit Student (/students/edit/{id})
+└── Delete Student (modal confirmation)
